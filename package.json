@@ -1,0 +1,15 @@
+{
+  "name": "cutiehack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Adil Mohiuddin <amohi9046@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "discord.js": "^13.3.1",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0"
+  }
+}
