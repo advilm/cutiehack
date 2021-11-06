@@ -40,7 +40,7 @@ client.on('interactionCreate', async interaction => {
 
 client.on('messageCreate', async message => {
     let command;
-    if (message.content.startsWith('!') && (command = commands.find(x => x.name = message.content.slice(1).split(' ')[0].toLowerCase()))) {
+    if (message.content.startsWith('!') && (command = commands.find(x => x.name === message.content.slice(1).split(' ')[0].toLowerCase()))) {
         command.run(message);
     }
 });
