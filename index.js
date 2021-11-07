@@ -42,6 +42,13 @@ client.on('messageCreate', async message => {
     let command;
     if (message.content.startsWith('!') && (command = commands.find(x => x.name === message.content.slice(1).split(' ')[0].toLowerCase()))) {
         command.run(message);
+    } else if (message.channel.name == 'counting') {
+        let messages = await message.channel.messages.fetch({ limit: 2 });
+        
+        if(messages.at(0).content != (+messages.at(1).content + 1)) {
+            console.log(+messages.at(1).content + 1, messages.at(0).content);
+            messages.at(0).delete();
+        }
     }
 });
 
